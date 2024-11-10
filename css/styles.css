@@ -1,0 +1,73 @@
+/* Reset some default styling for consistent layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.section {
+    width: 30%;
+    background-color: lightgray;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 20px;
+    position: relative;
+}
+
+.section-title {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ffcc00;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+/* Mobile View (max-width 767px) */
+@media screen and (max-width: 767px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .section {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* Tablet View (768px to 991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .section {
+        width: 48%;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .section:nth-child(3) {
+        width: 100%;
+    }
+}
+
+/* Desktop View (992px and above) */
+@media screen and (min-width: 992px) {
+    .section {
+        width: 30%;
+    }
+}
